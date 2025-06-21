@@ -21,11 +21,11 @@ export default function HeroSec() {
         transformOrigin: "top right",
       },
       {
-        scale: 0.5,
+        scale: 0.2,
         transformOrigin: "top right",
         scrollTrigger: {
           trigger: backgroundbox.current,
-          start: "top top+=50",
+          start: "top top",
           end: "bottom+=300 top",
           scrub: true,
           // markers: true,
@@ -49,7 +49,7 @@ export default function HeroSec() {
         start: "top+=5% top",
         end: "bottom top+=60%",
         scrub: true,
-        markers: true,
+        
       },
     });
   }, []);
@@ -63,21 +63,30 @@ export default function HeroSec() {
     <>
       <div
         ref={backgroundbox}
-        className="bg-green-400 h-[300vh] p-4 relative"
+        className="h-[400vh] p-4 relative "
       >
         {/* Sticky container */}
-        <div className="sticky top-4 left-0 w-full h-[calc(100vh-2rem)] overflow-hidden">
+        <div className="sticky  top-0 left-0 w-full h-[calc(100vh-2rem)] overflow-hidden">
           {/* Red Box */}
           <div
             ref={redBoxRef}
-            className="bg-red-500 w-full h-full rounded-2xl"
+            className="w-full h-full rounded-2xl mt-4"
             style={{ transformOrigin: "top right" }}
-          ></div>
+          >
+             <video
+              className="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-2xl"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src="/home-page/11904073_3840_2160_30fps.mp4"
+            />
+          </div>
 
           {/* Text box inside red box, bottom-left aligned */}
           <div
             ref={textDivBox}
-            className="absolute bottom-4 left-4 text-white text-xl max-w-xl"
+            className="absolute bottom-4 left-4 text-black text-xl max-w-xl font-serif"
           >
             {splitWords.map((word, i) => (
               <span
