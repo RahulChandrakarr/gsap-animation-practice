@@ -63,7 +63,7 @@ export default function HeroSec() {
     <>
       <div
         ref={backgroundbox}
-        className="h-[400vh] p-4 relative "
+        className="h-[400vh] p-4 relative bg-white"
       >
         {/* Sticky container */}
         <div className="sticky  top-0 left-0 w-full h-[calc(100vh-2rem)] overflow-hidden">
@@ -101,8 +101,7 @@ export default function HeroSec() {
         </div>
       </div>
 
-      {/* Bottom section */}
-      <div className="bg-yellow-400 h-[100vh] relative"></div>
+     
     </>
   );
 }
